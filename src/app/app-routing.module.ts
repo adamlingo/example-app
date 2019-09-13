@@ -5,9 +5,9 @@ import { PostListComponent } from './post/post-list.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/posts', pathMatch: 'full' },
-	{ path: 'posts', component: PostListComponent },
+	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: 'home',  component: HomepageComponent },
+	{ path: 'posts', component: PostListComponent },
 ]
 
 @NgModule({

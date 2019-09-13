@@ -18,9 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
-    HttpModule,
-    AppRoutingModule
+    HttpModule
   ],
   providers: [
     PostService
