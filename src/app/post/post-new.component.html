@@ -1,0 +1,45 @@
+<div class="jumbotron">
+	<h1 class="display-3"> Create New Post </h1>
+	<p class="lead"> A wonderful place to share.</p>
+	<hr class="m-y-md">
+	<p></p>
+	<!-- <p class="lead">
+		<a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.0/content/typography/#lead" role="button">
+		Learn more</a>
+	</p> -->
+</div>
+
+<!-- using FormsModule -->
+<div class="row">
+	<div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+		<!-- ngSubmit event-binding in real time instead of submitting form -->
+		<form (ngSubmit)="createPost(post)" #postForm='ngForm'>
+			<div class="form-group">
+				<label for="post-title">
+					<h3>Post Title</h3>
+				</label>
+				<input type="text" class="form-control" id="title"
+					required
+					name="title"
+					placeholder="Write title here : )" 
+					#title='ngModel' 
+					[ngModel]='post.title'>
+			</div>
+			<div class="form-group">
+				<label for="post-description">
+					<h3>Describe your Post</h3>
+				</label>
+				<textarea class="form-control" id="description"
+					required 
+					name="description"
+					placeholder="Post description..." 
+					#description='ngModel' 
+					[ngModel]='post.description'
+					rows="3">
+					</textarea>
+			</div>
+			<!-- disable button if post is not a valid entry -->
+			<button type="submit" class="btn btn-primary" [disabled]="!postForm.form.valid" >Submit Post</button>
+		</form>
+	</div>
+</div>
