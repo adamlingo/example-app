@@ -17,8 +17,8 @@ export class PostListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-  	let timer = Observable.timer(0, 5000);
-  	timer.subscribe(() => this.getPosts());
+    // removed Observable code that ran index on timer
+  	this.getPosts();
   }
   // calls getPosts() from post.service.ts
   getPosts()  {
